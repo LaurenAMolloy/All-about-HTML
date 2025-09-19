@@ -237,12 +237,12 @@
                 The type will change how the input behaves.A placeholder can be used to indicate to the user what should
                 entered. Labels give us information about and input but also associates the label to the input. Using
                 <code>label for="username"</code> and giving an <code>id</code> attribute will connect the label and the
-                input.
+                input. The default behaviour for a button inside a form is submit!
             </p>
-            <form action="/search/">
+            <form action="/search">
                 <p>
                     <label for="username">Enter a username</label>
-                    <input type="text" placeholder="username" id="username">
+                    <input type="text" placeholder="username" id="username" name="username">
                 </p>
 
                 <p>
@@ -256,8 +256,64 @@
                 </p>
                 <p>
                     <label for="number">Enter a number </label>
-                    <input type="number" placeholder="number" id="number">
+                    <input type="number" placeholder="number" id="number" min="1" max="10">
                 </p>
+                <button type="button">Submit</button>
+                <input type="submit" value="Click me">
+            </form>
+            <button>Not inside Form!</button>
+            <h2>More Inputs</h2>
+            <form action="/birds">
+                <input type="checkbox" name="agrees_tos" id="agree">
+                <label for="agree">I agree to everything</label>
+                <p>
+                    <label for="xs">XS</label>
+                    <input type="radio" name="size" id="XS" value="xs">
+                    <label for="S">S</label>
+                    <input type="radio" name="size" id="s" value="s">
+                    <label for="M">M</label>
+                    <input type="radio" name="size" id="m" value="m">
+                </p>
+                <!-- /birds?agrees_tos=on&size=s -->
+                <p>
+                    <label for="meal">Please select a meal</label>
+                    <select name="meal" id="meal">
+                        <option value="chickennuggets">Chicken Nuggets</option>
+                        <option value="cheeseburger">Cheese Burger</option>
+                        <option value="Hamburger">Hamburger</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="ketchup">ketchup</label>
+                    <input type="range" id="ketchup" min="1" max="5" value="2" name="ketchup">
+                </p>
+                <p>
+                    <label for="requests">Any Special Requests</label>
+                    <textarea id="requests" name="requests" rows="10" cols="40"></textarea>
+                </p>
+                <button>Submit</button>
+            </form>
+            <h2>Form Validation</h2>
+            <p>There are two types of validation client side and server side.
+            <ul>
+                <li><code>required</code></li>
+                <li><code>minlength</code> and <code>maxlength</code></li>
+                <li><code>pattern</code></li>
+                <li><code></code></li>
+                <li><code></code></li>
+            </ul>
+            </p>
+            <form action="/dummy">
+                <label for="name">Enter Name</label>
+                <input type=text name="name" id="name" required>
+                <p>
+                    <label for="username" id="username"></label>
+                    <input type="text" id="username" minlength="5" maxlength="10">
+                </p>
+                <p>
+                    <input type="email" required>
+                </p>
+                <button>Submit</button>
             </form>
         </section>
     </main>

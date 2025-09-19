@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </nav>
+        </header>
+        </section>
+        <h1>CSS Basics</h1>
+        <p>CSS stand for cascading style sheets. It is basically a set of rule and follow this pattern:
+            <code>selector {
+            property: value;
+            } </code>. There are so many properties. Do not panic! You can find the information online and you do not
+            need to remember them all.
+        </p>
+
+        </section>
+        <section>
+            <h2>How to Include Styles</h2>
+            <p>
+                Inline styles are not best practice. The best way to include styles is in a separate stylesheet. Use the
+                link element to add the stylesheet. This is best as now our styles can be accessed by across our program
+            </p>
+            <img src="/assets/images/styleslink.png" alt="screen with css selectors">
+        </section>
+        <section>
+            <h2>Colors</h2>
+            <p>
+                Named colors: Most browser recognise around 140 colors. These are the most limited! Most monitors can
+                display 16,000,000
+            </p>
+            <h2>R,G,B Colors</h2>
+            <p>
+                R,G,B is an additive color system. There are three channels ranging from 0 - 255. Here are some
+                examples:
+                <code>rgb(255,0,0)</code>
+                <code>rgb(0,255,0)</code>
+                <code>rgb(0,0 255)</code>
+            </p>
+            <h2>Hexidecimal</h2>
+            <p>
+                Hexidecimal is base 16, we use numbers 0-9 and letters A-F. Basically F is the same as writing 15, this
+                is so we can store more value in a single digit. Just like RGB the first two are red, second two are
+                green and the last two are blue!Hex example: <code>#ff23f2</code>
+            </p>
+        </section>
+        <section>
+            <h2>Text Properties</h2>
+            <p>
+                Text align is used to align an element on the page:
+                <code>text-align: center</code><br>
+                <code>text-align: left</code><br>
+                <code>text-align: right</code><br>
+            </p>
+            <p>Font Weight is used to set the weight for text</p>
+            <code>font-weight: 400</code><br>
+            <code>font-weight: 500</code><br>
+            <code>font-weight: 600</code><br>
+            <p>Text decoration is how we style text</p>
+            <code>text-decoration: blue underline</code><br>
+            <p class="underline">underline</p>
+            <code class="wavy">text-decoration: blue underline wavy</code>
+            <p>We can use it to remove default styles on links</p>
+            <code>text-decoration: none</code>
+        </section>
+        <section>
+            <h3>Pixels,Font Size and Font Family</h3>
+            <p>
+                We have many units to specify font size. Pixels are the most commonly used unit in absolute units.
+                Not recommnded for responsive sites!
+                <code>font-size: 100px</code>
+            </p>
+            <p class="verdana">
+                Fonts are built into your browser. We can use custom fonts too.<code>font family: verdana</code>.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

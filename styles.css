@@ -1,0 +1,48 @@
+:root {
+    background-color: #EEEEEE;
+    color: #333333;
+    font-family: "SUSE Mono", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: #2b2954
+}
+
+button {
+    background-color: #5a5d87;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+
+code {
+    color: red
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #37bad6;
+}
+
+.underline {
+    text-decoration: blue underline;
+}
+
+.wavy {
+    text-decoration: blue underline wavy;
+}
+
+.verdana {
+    font-family: verdana;
+}

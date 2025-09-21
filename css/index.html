@@ -178,9 +178,85 @@
                 What happens when there is a conflict in styles? What if we have a button with a class and just a
                 regular button? The browser measures how specific a selector is and the most specific will win. This is
                 the general formula to remember:<br>
-                <code>ID > CLASS > ELEMENT</code>.
+                <code>ID > CLASS > ELEMENT</code>. Order also matters, so the last style selector in the sheet will have
+                precidence. Use dev tools to explore when styles are not applied in the way you expected.
             </p>
             <a href="https://polypane.app/css-specificity-calculator/#selector=">Specificity Calculator</a>
+            <h3>Inline Styles</h3>
+            <p>
+                In line styles are the most specific way of styling elements. but they are not commonly used. Avoid
+                these
+                as they are confusing! If you use the <code>important!</code> exception this will overide all styles.
+            </p>
+            <h3>CSS Inheritance</h3>
+            <p>
+                This is something we have seen many times. Basically child elements will inherit styles from parent
+                elements. So if the body is set as a color of purple, all elements in the body will be purple. We can
+                inspect this in the dev tools. We can use the keyword <code>inherit</code> to make sure elements inherit
+                as sometimes elements do not inherit.
+            </p>
+        </section>
+        <section>
+            <h2>The Box Model</h2>
+            <p>
+                Boxmodel is the idea that everything on a webpage is a box and each box has different properties.
+                The first two properties to be aware of are to control the width and height. When we inspect we will see
+                a blue box, this indicates the content area.
+            </p>
+            <div class="boxmodel1">I have a width of 300px and a height of 200px</div>
+            <div class="boxmodel2">I have a width of 300px and a height of 200px. I have a margin of 0 auto</div>
+            <div class="boxmodel3">I have a width of 300px and a height of 200px</div>
+            <p>
+                There are different pieces of the border that we can control. It is the border behind element. The main
+                properties are:
+            </p>
+            <ul>
+                <li><code>border-width</code></li>
+                <li><code>border-color</code></li>
+                <li><code>border-style</code></li>
+            </ul>
+            <p>
+                <code>boxsizing: border-box</code> makes sure that the width of our element goes from border to border.
+                So our content will be minus the border size. We can use <code>border-radius</code> to create smooth
+                corners. We can use px or % to set the radius. We can also use it to create cirles or just set each
+                corner individually.
+            </p>
+            <h3>Margin and Padding</h3>
+            <h3>Padding</h3>
+            <p>
+                Padding pads the space between the content and the border. We can apply padding to each side separately
+                or we can use the shorthand property to add
+                padding to all four sides to any element.<code>padding: 20px</code><br>. We can also set padding to all
+                four sides using the order top | right | bottom | left. If we inspect an element usign dev tools we can
+                see padding as a green highlight
+                around an element.
+            </p>
+            <button class="pad">PAD ME</button>
+            <h3>Margin</h3>
+            <p>
+                Margin is the space outside the element's border. Just like padding we can add to indivisual sides or
+                all
+                four sides using the shorthand property. By default some elements have margin. Like the body. It is
+                common to set body to <br><code>body { margin: 0}</code>
+            </p>
+            <h3>Display Property</h3>
+            <p>
+                There is a property called <code>display</code>.
+                By default all heading elements are block and take up the full space available. But we can change this
+                default behaviour. Spans by deafult are inline. On our heading elements we could change the properties
+                <code>display: inline</code>.
+            <h3 class="display">I am h3</h3>
+            <h3 class="display">I am h3</h3>
+            <h3 class="display">I am h3</h3>
+            <span>I am span</span>
+            <span>I am span</span>
+            </p>
+        </section>
+        <section>
+            <h2>Assorted Properties</h2>
+        </section>
+        <section>
+            <h2>Flexbox</h2>
         </section>
     </main>
 </body>

@@ -17,7 +17,6 @@
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
-                    <li>JavaScript</li>
                 </ul>
             </nav>
         </header>
@@ -35,7 +34,8 @@
             <h2>How to Include Styles</h2>
             <p>
                 Inline styles are not best practice. The best way to include styles is in a separate stylesheet. Use the
-                link element to add the stylesheet. This is best as now our styles can be accessed by across our program
+                link element to add the stylesheet. This is best as now our styles can be accessed by across our
+                program.
             </p>
             <img src="/assets/images/styleslink.png" alt="screen with css selectors">
         </section>
@@ -89,6 +89,98 @@
             <p class="verdana">
                 Fonts are built into your browser. We can use custom fonts too.<code>font family: verdana</code>.
             </p>
+        </section>
+        <section>
+            <h2>CSS Selectors</h2>
+            <p>
+                <b>Universal selectors</b> select everything, although it is not that useful in more complex projects.
+                <code>* {background-color: cyan}</code>.
+                The <b>elements selector</b> are more common and can be used to select more than one element when
+                separated by
+                a comma.<code>h1, h2 {color: magenta}</code>
+            </p>
+            <h3>Id and Class Selector</h3>
+            <p>
+                We can use the class and ID selector to style elements with a certain ID or class. The id is unique and
+                there is only one per page used sparingly, there can be multiple elements with the same class.
+            </p>
+            <h3>Desendant Selectors</h3>
+            <p>
+                This will select all anchor tags nested inside the li <code>li a {color: teal}.</code>. For the example
+                below we could add a class to the ul then style the li and the nested links like this:
+                <code>.descendant li a {
+                text-decoration: none
+                }.</code>
+            </p>
+            <ul class="descendant">
+                <li>
+                    <a href="home">Home</a>
+                </li>
+                <li>
+                    <a href="home">About</a>
+                </li>
+                <li>
+                    <a href="home">Contact</a>
+                </li>
+            </ul>
+            <h3>Adjacent and Descendant Selectors</h3>
+            <p>This will select elements that are on the same level. So for example a button directly after an input
+                will be pink:<br> <code>input + button {background-color: pink}</code>.</p>
+            <input type="text">
+            <button>I am adjecant!</button>
+            <p>
+                Any element that is a direct descendant can be selected using the angle bracket although it is not so
+                common.<br> <code>div > li {color: white}</code>
+            </p>
+            <h3>Attribute Selector</h3>
+            <p>We can use square brackets to grab a selector by the type for example!<br><code>input[type="text"] {
+            width: 300px;
+            color: yellow;}
+            </code></p>
+            <input type="password" placeholder="password">
+            <h3>Psuedo Classes</h3>
+            <p>
+                Psuedo classes are modifiers used to show when an element has a different interaction such as hover.
+                Psuedo classes start with a colon. To add a psuedo class to the button below I used this selector.<br>
+                <code>.hover:hover {
+                    background-color: #37bad6;
+                    color: #2b2954;
+                }</code>.<br><br> We can also add an active selector for when we click on a button.<br> <code>.hover:active {
+                    background-color: pink;
+                    color: #2b2954;
+                }</code><br>
+                <button class="hover">Hover Me!</button>
+            </p>
+            <p>
+                Nth of type can be used to apply styles to every other one, or the last one.<br>
+                <code>.box:nth-of-type(2n) {
+                background-color: pink;}</code>.
+            </p>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <h3>Psuedo Elements</h3>
+            <p>This keyword lets you style a particular part of an element. For example the bullets in a list...</p>
+            <ul class="psuedo">
+                <li>::after</li>
+                <li>::before</li>
+                <li>::first-letter</li>
+                <li>::first-line</li>
+                <li>::selection</li>
+            </ul>
+            <p>A final note...The order you declare your styles matters. If you try to add a color selector to a h1 for
+                example twice the last selector will win.</p>
+        </section>
+        <section>
+            <h2>WTF is Specificity?</h2>
+            <p>
+                What happens when there is a conflict in styles? What if we have a button with a class and just a
+                regular button? The browser measures how specific a selector is and the most specific will win. This is
+                the general formula to remember:<br>
+                <code>ID > CLASS > ELEMENT</code>.
+            </p>
+            <a href="https://polypane.app/css-specificity-calculator/#selector=">Specificity Calculator</a>
         </section>
     </main>
 </body>

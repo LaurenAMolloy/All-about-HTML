@@ -46,3 +46,49 @@ hr {
 .verdana {
     font-family: verdana;
 }
+
+.descendant li a {
+    text-decoration: none;
+    list-style: none;
+}
+
+input+button {
+    background-color: pink;
+    color: #2b2954;
+}
+
+input[type="password"] {
+    color: #37bad6;
+}
+
+.hover:hover {
+    background-color: #37bad6;
+    color: #2b2954;
+}
+
+.hover:active {
+    background-color: pink;
+    color: #2b2954;
+}
+
+.box {
+    height: 50px;
+    background-color: #5a5d87;
+    margin-top: 1rem;
+}
+
+.box:nth-of-type(2n) {
+    background-color: pink;
+}
+
+.psuedo li {
+    list-style: none;
+}
+
+.psuedo li::before {
+    content: "❤️";
+}
+
+p::selection {
+    background-color: aqua;
+}

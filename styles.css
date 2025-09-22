@@ -146,3 +146,121 @@ p::selection {
 span {
     background-color: #37bad6;
 }
+
+.inline {
+    display: inline;
+    background-color: pink;
+    border: 2px solid #2b2954;
+}
+
+.inline-block {
+    background-color: #5a5d87;
+    color: #EEEEEE;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    border: 2px solid #2b2954;
+    margin-top: 1rem;
+}
+
+.parent {
+    width: 500px;
+    height: 500px;
+    background-color: #2b2954;
+}
+
+.child {
+    width: 50%;
+    height: 50%;
+    background-color: pink;
+}
+
+.em {
+    font-size: 1em;
+    padding: .5em 2em;
+    border-radius: 1em;
+}
+
+.alpha {
+    width: 500px;
+    height: 500px;
+    background-color: #5a5d87;
+}
+
+.inside-alpha {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.opacity {
+    width: 500px;
+    height: 500px;
+    background-color: #5a5d87;
+}
+
+.inside-o {
+    width: 50%;
+    height: 50%;
+    opacity: 50%;
+    background-color: pink;
+
+}
+
+.static {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border: 2px solid #5a5d87;
+    display: inline-block;
+}
+
+.static-middle {
+    width: 100px;
+    height: 100px;
+    background-color: #5a5d87;
+    border: 2px solid pink;
+    position: static;
+    display: inline-block;
+}
+
+.relative {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border: 2px solid #5a5d87;
+    display: inline-block;
+}
+
+.relative-middle {
+    width: 100px;
+    height: 100px;
+    background-color: #5a5d87;
+    border: 2px solid pink;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+}
+
+.absolute-container {
+    position: relative;
+}
+
+.absolute {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border: 2px solid #5a5d87;
+    display: inline-block;
+}
+
+.absolute-middle {
+    width: 100px;
+    height: 100px;
+    background-color: #5a5d87;
+    border: 2px solid pink;
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}

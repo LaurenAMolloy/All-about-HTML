@@ -243,17 +243,122 @@
             <p>
                 There is a property called <code>display</code>.
                 By default all heading elements are block and take up the full space available. But we can change this
-                default behaviour. Spans by deafult are inline. On our heading elements we could change the properties
-                <code>display: inline</code>.
-            <h3 class="display">I am h3</h3>
-            <h3 class="display">I am h3</h3>
-            <h3 class="display">I am h3</h3>
+                default behaviour. Spans by default are inline. On our heading elements we could change the properties
+                <code>display: inline</code>. What happens to padding and margin on inline elements? Padding does not
+                take space on inline elements and is not respected by other elements on the page. Width, height, margin
+                and padding are all repsected on block elements.
+            <h3 class="display">I am a block h3</h3>
+            <h3 class="display">I am a block h3</h3>
+            <h3 class="display">I am block h3</h3>
             <span>I am span</span>
             <span>I am span</span>
+            <h3 class="inline">I am an inline h3</h3>
+            <h3 class="inline">I am an inline h3</h3>
+            <h3 class="inline">I am an inline h3</h3>
+            <div class="inline-block">I am inline block</div>
+            <div class="inline-block">I am inline block</div>
+            <div class="inline-block">I am inline block</div>
+            </p>
+            <p>
+                <code>inline-block</code> allows all elements to behave like inline elements with all the properties of
+                block elements respected.<code>display:none</code> is a useful property that can be used with javascript
+                to hide elements dynamically.
+            </p>
+            <h3>CSS units</h3>
+            <p>
+                Units in CSS consist of relative and absolute. Pixels are the most common absolute value. We will focus
+                on the relative units that consist of...<br>
+            <ul>
+                <li>EM</li>
+                <li>REM</li>
+                <li>VH</li>
+                <li>VW</li>
+                <li>%</li>
+            </ul>
+            <p>
+                Percentages are always relative to some other value. For example <code>width:50%</code>. This describes
+                an element that is 50% of the parent element.
+            </p>
+            <div class="parent">
+                <div class="child"></div>
+            </div>
+            <p>
+                Em's and Rem's are relative units. With font size the value is based on the parent element for
+                example...If a parent has a font size of 30px and the child has font size of 2em that will be 60px. If
+                we use em's with the margin property for example a h2 with a font size of 2em and we add a margin of
+                1em, <code>margin-left: 1em</code> is equal to 2em. This is useful because it allows us to make elements
+                responsive. With pixels elements do not scale well. When we use ems element proportions will grow or
+                shrink relative to the parent.
+            </p>
+            <button class="em">Click me!</button>
+            <p>The problem with ems is they can grow and shrink quickly. As they can multiply if we have nested elements
+            </p>
+            <ul>
+                <li>Pasta
+                    <ul>
+                        <li>Ravioli</li>
+                        <li>Penne</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                Rem's are the solution to this problem as rems are relative to the root element font size. The deafult
+                is
+                16px but you can reset it. So 3rem would be 3 x the root.
             </p>
         </section>
         <section>
             <h2>Assorted Properties</h2>
+            <h3>Alpha Channel</h3>
+            <p>
+                This governs the transparancy of a color. This <code>rgba(255, 255, 255, 0)</code> will result in full
+                transparency. Whereas this <code>rgba(255, 255, 255, 1)</code> will result in no transparency. If we
+                adapt the alpha channel to .5 this will be opaque. it is worth noting that this only effects the
+                background.
+            </p>
+            <div class="alpha">
+                <div class="inside-alpha">
+                </div>
+            </div>
+            <p>
+                Opacity applies to the entire element.Other elements will also be impacted such as any
+                buttons. Example:<code>opacity: 50%</code>
+            </p>
+            <div class="opacity">
+                <div class="inside-o">
+                </div>
+            </div>
+            <h3>Position</h3>
+            <p>
+                This can be super confusing! You may need to refer to the <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">docs</a> for this one! Let's start
+                with three divs.
+            </p>
+            <h4>Static</h4>
+            <p>The default position of any element is static</p>
+            <div class="static"></div>
+            <div class="static-middle"></div>
+            <div class="static"></div>
+            <h4>Relative</h4>
+            <p>
+                We can use position relative to offset an element relative to itself.<code>position: relative;
+                top: 100px;</code>
+            </p>
+            <div class="relative"></div>
+            <div class="relative-middle"></div>
+            <div class="relative"></div>
+            <h4>Absolute</h4>
+            <p>
+                We can use position absolute to remove the element from the normal flow of the document and no space is
+                held for that element.<code>position: absolute;
+                top: 100px;</code>. If the parent does not have a psoition of absolute, the element will be positioned
+                relative to the body.
+            </p>
+            <div class="absolute-container">
+                <div class="absolute"></div>
+                <div class="absolute-middle"></div>
+                <div class="absolute"></div>
+            </div>
         </section>
         <section>
             <h2>Flexbox</h2>

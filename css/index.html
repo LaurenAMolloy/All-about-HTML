@@ -351,7 +351,7 @@
             <p>
                 We can use position absolute to remove the element from the normal flow of the document and no space is
                 held for that element.<code>position: absolute;
-                top: 100px;</code>. If the parent does not have a psoition of absolute, the element will be positioned
+                top: 100px;</code>. If the parent does not have a position of absolute, the element will be positioned
                 relative to the body.
             </p>
             <div class="absolute-container">
@@ -359,9 +359,68 @@
                 <div class="absolute-middle"></div>
                 <div class="absolute"></div>
             </div>
+            <div class="fixed-container">
+                <h4>Fixed</h4>
+                <p>
+                    An element that is fixed will go all the way up to the containing block and stay there. Even when
+                    there
+                    is additional content and the user scrolls. Sticky is simlilar it will remain inplace until the user
+                    scrolls past and then it will "stick" to the top of the window.
+
+                </p>
+                <div>
+                    <div class="static"></div>
+                    <div class="middle-fixed">I am fixed</div>
+                    <div class="static"></div>
+                </div>
+            </div>
+            <h3>Transitions(Yey!)</h3>
+            <p>
+                Transitions allow us to animate elements on page. In the example below we add
+                <code>transition: 1s</code>. This allows the hover effect to appear very smooth. We can add the
+                following to our transition:
+            </p>
+            <ul>
+                <li>Property name</li>
+                <li>Duration</li>
+                <li>Timing Function</li>
+                <li>Delay</li>
+            </ul>
+            <p>If you want all properties just specify <code>all</code>. Transition timing functions let you change the
+                way the animation moves.</p>
+            <div class="circle"></div>
         </section>
-        <section>
-            <h2>Flexbox</h2>
+        <section class="margindiv">
+            <p>
+                In the example below we can see different transitions applied to arrive at the same point using
+                transition timing functions.
+            </p>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p>
+                To summarize there are four properties, an element, a duration, a timing function and a delay (default
+                no
+                delay)
+            </p>
+            <h3>The Power of Transform</h3>
+            <p>
+                Transform is awesome! We can scale, rotate, skew elements like in photoshop. <code>rotate</code> accepts
+                degrees,
+                radiants and turns. <code>scale</code> accepts a decimal as a unit.
+            </p>
+        </section>
+        <section id="transform-container">
+            <div class="transform">Rotate</div>
+            <div class="transform">Scale</div>
+            <div class="transform">TranslateX</div>
+            <div class="transform">TranslateY</div>
+            <div class="transform">Skew</div>
+        </section>
+        <section class="hover-me">
+            <h3>A Cool Hover Button Example</h3>
+            <button class="hover-btn">Hover Me!</button>
         </section>
     </main>
 </body>

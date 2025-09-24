@@ -370,7 +370,7 @@
                 </p>
                 <div>
                     <div class="static"></div>
-                    <div class="middle-fixed">I am fixed</div>
+                    <!--<div class="middle-fixed">I am fixed</div> -->
                     <div class="static"></div>
                 </div>
             </div>
@@ -421,6 +421,75 @@
         <section class="hover-me">
             <h3>A Cool Hover Button Example</h3>
             <button class="hover-btn">Hover Me!</button>
+        </section>
+        <h3>Background</h3>
+        <p>
+            We can add an image as a background. We can specify the url to add the image
+            <code>background: url()</code>. We can use properties such as <code>background-size: cover;</code> to
+            determine the size of the image.
+        <section class="background">
+            </p>
+            <h3>In the midst of winter,</h3>
+            <p>I found there was within me an invincible summer.</p>
+            <p>-Albert Camus</p>
+        </section>
+        <section>
+            <h3>Flexbox</h3>
+            <p>An introduction to Flexbox. Flexbox allows us to layout content dynamically. There are two axis to
+                consider when using flexbox. The main axis that flows from left to right. We can use
+                <code>row-reverse</code> to change the direct to right to left. We can do teh same thing with the column
+                property which is the cross axis and flows top to bottom <code>column-reverse</code>.
+            </p>
+            <div class="flex-container">
+                <div class="flex1">H</div>
+                <div class="flex2">E</div>
+                <div class="flex3">L</div>
+                <div class="flex4">L</div>
+                <div class="flex5">O</div>
+            </div>
+            <p>Justify-content is useful for organising our content. We can use the following properties...</p>
+            <ul>
+                <li><code>justify-content:start</code></li>
+                <li><code>justify-content:flex-end</code></li>
+                <li><code>justify-content:center</code></li>
+                <li><code>justify-content:space-between</code></li>
+                <li><code>justify-content:space-around</code></li>
+            </ul>
+            <p>
+                Elements will automatically fit to a containers content. We can use <code>flex-wrap: wrap</code> to
+                ensure items go on a new row when they do not fit.
+            </p>
+            <p>
+                Align items is used to align items on the cross axis. The default cross axis is top to bottom. We can
+                use the following properties with align-items... All are self explanatory apart from baseline. Baseline
+                aligns each element to the bottom of the text.
+            </p>
+            <ul>
+                <li><code>align-items: flex-start</code></li>
+                <li><code>align-items: flex-end</code></li>
+                <li><code>align-items: center</code></li>
+                <li><code>align-items: base-line</code></li>
+            </ul>
+            <p>
+                Align content is used to control space between colums and it only works when we have <code>wrap</code>
+                or <code>wrap-reverse</code>
+                as a property that is works. Aloign self is very similar and we add it to indivual elements rather that
+                the flex container it self.
+            </p>
+            <p>
+                How do we make elements grow or shrink based on the flex container? We can use <code>flex-basis</code>.
+                <code>Flex basis</code> is the initial size an element should be wheh added to our content.
+                <code>Flex-grow </code>ensures an
+                element takes up all the space available. <code>Flex-shrink</code> ensures an element reduces in size
+                relative to
+                other elements. In the exampel below item 2 will not shrink, item 1 will become narrow quickly and item
+                3 shrinks normally.
+            </p>
+            <div class="flex-shrink">
+                <div>Item 1<br>(shrink 2)</div>
+                <div>Item 2<br>(shrink 0)</div>
+                <div>Item 3<br>(shrink 1)</div>
+            </div>
         </section>
     </main>
 </body>

@@ -11,487 +11,585 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <nav>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-            </nav>
-        </header>
-        </section>
-        <h1>CSS Basics</h1>
-        <p>CSS stand for cascading style sheets. It is basically a set of rule and follow this pattern:
-            <code>selector {
-            property: value;
-            } </code>. There are so many properties. Do not panic! You can find the information online and you do not
-            need to remember them all.
-        </p>
-
-        </section>
-        <section>
-            <h2>How to Include Styles</h2>
-            <p>
-                Inline styles are not best practice. The best way to include styles is in a separate stylesheet. Use the
-                link element to add the stylesheet. This is best as now our styles can be accessed by across our
-                program.
-            </p>
-            <img src="/assets/images/styleslink.png" alt="screen with css selectors">
-        </section>
-        <section>
-            <h2>Colors</h2>
-            <p>
-                Named colors: Most browser recognise around 140 colors. These are the most limited! Most monitors can
-                display 16,000,000
-            </p>
-            <h2>R,G,B Colors</h2>
-            <p>
-                R,G,B is an additive color system. There are three channels ranging from 0 - 255. Here are some
-                examples:
-                <code>rgb(255,0,0)</code>
-                <code>rgb(0,255,0)</code>
-                <code>rgb(0,0 255)</code>
-            </p>
-            <h2>Hexidecimal</h2>
-            <p>
-                Hexidecimal is base 16, we use numbers 0-9 and letters A-F. Basically F is the same as writing 15, this
-                is so we can store more value in a single digit. Just like RGB the first two are red, second two are
-                green and the last two are blue!Hex example: <code>#ff23f2</code>
-            </p>
-        </section>
-        <section>
-            <h2>Text Properties</h2>
-            <p>
-                Text align is used to align an element on the page:
-                <code>text-align: center</code><br>
-                <code>text-align: left</code><br>
-                <code>text-align: right</code><br>
-            </p>
-            <p>Font Weight is used to set the weight for text</p>
-            <code>font-weight: 400</code><br>
-            <code>font-weight: 500</code><br>
-            <code>font-weight: 600</code><br>
-            <p>Text decoration is how we style text</p>
-            <code>text-decoration: blue underline</code><br>
-            <p class="underline">underline</p>
-            <code class="wavy">text-decoration: blue underline wavy</code>
-            <p>We can use it to remove default styles on links</p>
-            <code>text-decoration: none</code>
-        </section>
-        <section>
-            <h3>Pixels,Font Size and Font Family</h3>
-            <p>
-                We have many units to specify font size. Pixels are the most commonly used unit in absolute units.
-                Not recommnded for responsive sites!
-                <code>font-size: 100px</code>
-            </p>
-            <p class="verdana">
-                Fonts are built into your browser. We can use custom fonts too.<code>font family: verdana</code>.
-            </p>
-        </section>
-        <section>
-            <h2>CSS Selectors</h2>
-            <p>
-                <b>Universal selectors</b> select everything, although it is not that useful in more complex projects.
-                <code>* {background-color: cyan}</code>.
-                The <b>elements selector</b> are more common and can be used to select more than one element when
-                separated by
-                a comma.<code>h1, h2 {color: magenta}</code>
-            </p>
-            <h3>Id and Class Selector</h3>
-            <p>
-                We can use the class and ID selector to style elements with a certain ID or class. The id is unique and
-                there is only one per page used sparingly, there can be multiple elements with the same class.
-            </p>
-            <h3>Desendant Selectors</h3>
-            <p>
-                This will select all anchor tags nested inside the li <code>li a {color: teal}.</code>. For the example
-                below we could add a class to the ul then style the li and the nested links like this:
-                <code>.descendant li a {
-                text-decoration: none
-                }.</code>
-            </p>
-            <ul class="descendant">
+    <header>
+        <nav>
+            <li><a href="#home">Home</a></li>
+            <ul>
                 <li>
-                    <a href="home">Home</a>
+                    <a href="/index.html">HTML</a>
                 </li>
                 <li>
-                    <a href="home">About</a>
+                    <a href="/css/index.html">CSS</a>
                 </li>
                 <li>
-                    <a href="home">Contact</a>
+                    <a href="#Home">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
-            <h3>Adjacent and Descendant Selectors</h3>
-            <p>This will select elements that are on the same level. So for example a button directly after an input
-                will be pink:<br> <code>input + button {background-color: pink}</code>.</p>
-            <input type="text">
-            <button>I am adjecant!</button>
-            <p>
-                Any element that is a direct descendant can be selected using the angle bracket although it is not so
-                common.<br> <code>div > li {color: white}</code>
-            </p>
-            <h3>Attribute Selector</h3>
-            <p>We can use square brackets to grab a selector by the type for example!<br><code>input[type="text"] {
+            <img class="logo" src="/assets/images/square_brackets.jpg" alt="hand drawn square brackets">
+        </nav>
+    </header>
+    <main>
+        <div class="content-wrapper">
+            <section>
+                <h1>CSS Basics</h1>
+                <p>
+                    CSS stand for cascading style sheets. It is basically a set of rule and follow this pattern:
+                    <code>selector {
+            property: value;
+            } </code>. There are so many properties. Do not panic! You can find the information online and you do not
+                    need to remember them all.
+                </p>
+            </section>
+            <section>
+                <h2>How to Include Styles</h2>
+                <p>
+                    Inline styles are not best practice. The best way to include styles is in a separate stylesheet. Use
+                    the
+                    link element to add the stylesheet. This is best as now our styles can be accessed by across our
+                    program.
+                </p>
+                <img src="/assets/images/styleslink.png" alt="screen with css selectors">
+            </section>
+            <section>
+                <h2>Colors</h2>
+                <p>
+                    Named colors: Most browser recognise around 140 colors. These are the most limited! Most monitors
+                    can
+                    display 16,000,000
+                </p>
+                <h2>R,G,B Colors</h2>
+                <p>
+                    R,G,B is an additive color system. There are three channels ranging from 0 - 255. Here are some
+                    examples:
+                    <code>rgb(255,0,0)</code>
+                    <code>rgb(0,255,0)</code>
+                    <code>rgb(0,0 255)</code>
+                </p>
+                <h2>Hexidecimal</h2>
+                <p>
+                    Hexidecimal is base 16, we use numbers 0-9 and letters A-F. Basically F is the same as writing 15,
+                    this
+                    is so we can store more value in a single digit. Just like RGB the first two are red, second two are
+                    green and the last two are blue!Hex example: <code>#ff23f2</code>
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h2>Text Properties</h2>
+                <p>
+                    Text align is used to align an element on the page:
+                    <code>text-align: center</code><br>
+                    <code>text-align: left</code><br>
+                    <code>text-align: right</code><br>
+                </p>
+                <p>Font Weight is used to set the weight for text</p>
+                <code>font-weight: 400</code><br>
+                <code>font-weight: 500</code><br>
+                <code>font-weight: 600</code><br>
+                <p>Text decoration is how we style text</p>
+                <code>text-decoration: blue underline</code><br>
+                <p class="underline">underline</p>
+                <code class="wavy">text-decoration: blue underline wavy</code>
+                <p>We can use it to remove default styles on links</p>
+                <code>text-decoration: none</code>
+            </section>
+            <section>
+                <h3>Pixels,Font Size and Font Family</h3>
+                <p>
+                    We have many units to specify font size. Pixels are the most commonly used unit in absolute units.
+                    Not recommnded for responsive sites!
+                    <code>font-size: 100px</code>
+                </p>
+                <p class="verdana">
+                    Fonts are built into your browser. We can use custom fonts too.<code>font family: verdana</code>.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h2>CSS Selectors</h2>
+                <p>
+                    <b>Universal selectors</b> select everything, although it is not that useful in more complex
+                    projects.
+                    <code>* {background-color: cyan}</code>.
+                    The <b>elements selector</b> are more common and can be used to select more than one element when
+                    separated by
+                    a comma.<code>h1, h2 {color: magenta}</code>
+                </p>
+                <h3>Id and Class Selector</h3>
+                <p>
+                    We can use the class and ID selector to style elements with a certain ID or class. The id is unique
+                    and
+                    there is only one per page used sparingly, there can be multiple elements with the same class.
+                </p>
+                <h3>Desendant Selectors</h3>
+                <p>
+                    This will select all anchor tags nested inside the li <code>li a {color: teal}.</code>. For the
+                    example
+                    below we could add a class to the ul then style the li and the nested links like this:
+                    <code>.descendant li a {
+                text-decoration: none
+                }.</code>
+                </p>
+                <ul class="descendant">
+                    <li>
+                        <a href="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="home">About</a>
+                    </li>
+                    <li>
+                        <a href="home">Contact</a>
+                    </li>
+                </ul>
+                <h3>Adjacent and Descendant Selectors</h3>
+                <p>This will select elements that are on the same level. So for example a button directly after an input
+                    will be pink:<br> <code>input + button {background-color: pink}</code>.</p>
+                <input type="text">
+                <button>I am adjecant!</button>
+                <p>
+                    Any element that is a direct descendant can be selected using the angle bracket although it is not
+                    so
+                    common.<br> <code>div > li {color: white}</code>
+                </p>
+                <h3>Attribute Selector</h3>
+                <p>We can use square brackets to grab a selector by the type for example!<br><code>input[type="text"] {
             width: 300px;
             color: yellow;}
             </code></p>
-            <input type="password" placeholder="password">
-            <h3>Psuedo Classes</h3>
-            <p>
-                Psuedo classes are modifiers used to show when an element has a different interaction such as hover.
-                Psuedo classes start with a colon. To add a psuedo class to the button below I used this selector.<br>
-                <code>.hover:hover {
+                <input type="password" placeholder="password">
+                <h3>Psuedo Classes</h3>
+                <p>
+                    Psuedo classes are modifiers used to show when an element has a different interaction such as hover.
+                    Psuedo classes start with a colon. To add a psuedo class to the button below I used this
+                    selector.<br>
+                    <code>.hover:hover {
                     background-color: #37bad6;
                     color: #2b2954;
                 }</code>.<br><br> We can also add an active selector for when we click on a button.<br> <code>.hover:active {
                     background-color: pink;
                     color: #2b2954;
                 }</code><br>
-                <button class="hover">Hover Me!</button>
-            </p>
-            <p>
-                Nth of type can be used to apply styles to every other one, or the last one.<br>
-                <code>.box:nth-of-type(2n) {
-                background-color: pink;}</code>.
-            </p>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <h3>Psuedo Elements</h3>
-            <p>This keyword lets you style a particular part of an element. For example the bullets in a list...</p>
-            <ul class="psuedo">
-                <li>::after</li>
-                <li>::before</li>
-                <li>::first-letter</li>
-                <li>::first-line</li>
-                <li>::selection</li>
-            </ul>
-            <p>A final note...The order you declare your styles matters. If you try to add a color selector to a h1 for
-                example twice the last selector will win.</p>
-        </section>
-        <section>
-            <h2>WTF is Specificity?</h2>
-            <p>
-                What happens when there is a conflict in styles? What if we have a button with a class and just a
-                regular button? The browser measures how specific a selector is and the most specific will win. This is
-                the general formula to remember:<br>
-                <code>ID > CLASS > ELEMENT</code>. Order also matters, so the last style selector in the sheet will have
-                precidence. Use dev tools to explore when styles are not applied in the way you expected.
-            </p>
-            <a href="https://polypane.app/css-specificity-calculator/#selector=">Specificity Calculator</a>
-            <h3>Inline Styles</h3>
-            <p>
-                In line styles are the most specific way of styling elements. but they are not commonly used. Avoid
-                these
-                as they are confusing! If you use the <code>important!</code> exception this will overide all styles.
-            </p>
-            <h3>CSS Inheritance</h3>
-            <p>
-                This is something we have seen many times. Basically child elements will inherit styles from parent
-                elements. So if the body is set as a color of purple, all elements in the body will be purple. We can
-                inspect this in the dev tools. We can use the keyword <code>inherit</code> to make sure elements inherit
-                as sometimes elements do not inherit.
-            </p>
-        </section>
-        <section>
-            <h2>The Box Model</h2>
-            <p>
-                Boxmodel is the idea that everything on a webpage is a box and each box has different properties.
-                The first two properties to be aware of are to control the width and height. When we inspect we will see
-                a blue box, this indicates the content area.
-            </p>
-            <div class="boxmodel1">I have a width of 300px and a height of 200px</div>
-            <div class="boxmodel2">I have a width of 300px and a height of 200px. I have a margin of 0 auto</div>
-            <div class="boxmodel3">I have a width of 300px and a height of 200px</div>
-            <p>
-                There are different pieces of the border that we can control. It is the border behind element. The main
-                properties are:
-            </p>
-            <ul>
-                <li><code>border-width</code></li>
-                <li><code>border-color</code></li>
-                <li><code>border-style</code></li>
-            </ul>
-            <p>
-                <code>boxsizing: border-box</code> makes sure that the width of our element goes from border to border.
-                So our content will be minus the border size. We can use <code>border-radius</code> to create smooth
-                corners. We can use px or % to set the radius. We can also use it to create cirles or just set each
-                corner individually.
-            </p>
-            <h3>Margin and Padding</h3>
-            <h3>Padding</h3>
-            <p>
-                Padding pads the space between the content and the border. We can apply padding to each side separately
-                or we can use the shorthand property to add
-                padding to all four sides to any element.<code>padding: 20px</code><br>. We can also set padding to all
-                four sides using the order top | right | bottom | left. If we inspect an element usign dev tools we can
-                see padding as a green highlight
-                around an element.
-            </p>
-            <button class="pad">PAD ME</button>
-            <h3>Margin</h3>
-            <p>
-                Margin is the space outside the element's border. Just like padding we can add to indivisual sides or
-                all
-                four sides using the shorthand property. By default some elements have margin. Like the body. It is
-                common to set body to <br><code>body { margin: 0}</code>
-            </p>
-            <h3>Display Property</h3>
-            <p>
-                There is a property called <code>display</code>.
-                By default all heading elements are block and take up the full space available. But we can change this
-                default behaviour. Spans by default are inline. On our heading elements we could change the properties
-                <code>display: inline</code>. What happens to padding and margin on inline elements? Padding does not
-                take space on inline elements and is not respected by other elements on the page. Width, height, margin
-                and padding are all repsected on block elements.
-            <h3 class="display">I am a block h3</h3>
-            <h3 class="display">I am a block h3</h3>
-            <h3 class="display">I am block h3</h3>
-            <span>I am span</span>
-            <span>I am span</span>
-            <h3 class="inline">I am an inline h3</h3>
-            <h3 class="inline">I am an inline h3</h3>
-            <h3 class="inline">I am an inline h3</h3>
-            <div class="inline-block">I am inline block</div>
-            <div class="inline-block">I am inline block</div>
-            <div class="inline-block">I am inline block</div>
-            </p>
-            <p>
-                <code>inline-block</code> allows all elements to behave like inline elements with all the properties of
-                block elements respected.<code>display:none</code> is a useful property that can be used with javascript
-                to hide elements dynamically.
-            </p>
-            <h3>CSS units</h3>
-            <p>
-                Units in CSS consist of relative and absolute. Pixels are the most common absolute value. We will focus
-                on the relative units that consist of...<br>
-            <ul>
-                <li>EM</li>
-                <li>REM</li>
-                <li>VH</li>
-                <li>VW</li>
-                <li>%</li>
-            </ul>
-            <p>
-                Percentages are always relative to some other value. For example <code>width:50%</code>. This describes
-                an element that is 50% of the parent element.
-            </p>
-            <div class="parent">
-                <div class="child"></div>
-            </div>
-            <p>
-                Em's and Rem's are relative units. With font size the value is based on the parent element for
-                example...If a parent has a font size of 30px and the child has font size of 2em that will be 60px. If
-                we use em's with the margin property for example a h2 with a font size of 2em and we add a margin of
-                1em, <code>margin-left: 1em</code> is equal to 2em. This is useful because it allows us to make elements
-                responsive. With pixels elements do not scale well. When we use ems element proportions will grow or
-                shrink relative to the parent.
-            </p>
-            <button class="em">Click me!</button>
-            <p>The problem with ems is they can grow and shrink quickly. As they can multiply if we have nested elements
-            </p>
-            <ul>
-                <li>Pasta
-                    <ul>
-                        <li>Ravioli</li>
-                        <li>Penne</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>
-                Rem's are the solution to this problem as rems are relative to the root element font size. The deafult
-                is
-                16px but you can reset it. So 3rem would be 3 x the root.
-            </p>
-        </section>
-        <section>
-            <h2>Assorted Properties</h2>
-            <h3>Alpha Channel</h3>
-            <p>
-                This governs the transparancy of a color. This <code>rgba(255, 255, 255, 0)</code> will result in full
-                transparency. Whereas this <code>rgba(255, 255, 255, 1)</code> will result in no transparency. If we
-                adapt the alpha channel to .5 this will be opaque. it is worth noting that this only effects the
-                background.
-            </p>
-            <div class="alpha">
-                <div class="inside-alpha">
-                </div>
-            </div>
-            <p>
-                Opacity applies to the entire element.Other elements will also be impacted such as any
-                buttons. Example:<code>opacity: 50%</code>
-            </p>
-            <div class="opacity">
-                <div class="inside-o">
-                </div>
-            </div>
-            <h3>Position</h3>
-            <p>
-                This can be super confusing! You may need to refer to the <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">docs</a> for this one! Let's start
-                with three divs.
-            </p>
-            <h4>Static</h4>
-            <p>The default position of any element is static</p>
-            <div class="static"></div>
-            <div class="static-middle"></div>
-            <div class="static"></div>
-            <h4>Relative</h4>
-            <p>
-                We can use position relative to offset an element relative to itself.<code>position: relative;
-                top: 100px;</code>
-            </p>
-            <div class="relative"></div>
-            <div class="relative-middle"></div>
-            <div class="relative"></div>
-            <h4>Absolute</h4>
-            <p>
-                We can use position absolute to remove the element from the normal flow of the document and no space is
-                held for that element.<code>position: absolute;
-                top: 100px;</code>. If the parent does not have a position of absolute, the element will be positioned
-                relative to the body.
-            </p>
-            <div class="absolute-container">
-                <div class="absolute"></div>
-                <div class="absolute-middle"></div>
-                <div class="absolute"></div>
-            </div>
-            <div class="fixed-container">
-                <h4>Fixed</h4>
-                <p>
-                    An element that is fixed will go all the way up to the containing block and stay there. Even when
-                    there
-                    is additional content and the user scrolls. Sticky is simlilar it will remain inplace until the user
-                    scrolls past and then it will "stick" to the top of the window.
-
+                    <button class="hover">Hover Me!</button>
                 </p>
-                <div>
-                    <div class="static"></div>
-                    <!--<div class="middle-fixed">I am fixed</div> -->
-                    <div class="static"></div>
+                <p>
+                    Nth of type can be used to apply styles to every other one, or the last one.<br>
+                    <code>.box:nth-of-type(2n) {
+                background-color: pink;}</code>.
+                </p>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <h3>Psuedo Elements</h3>
+                <p>This keyword lets you style a particular part of an element. For example the bullets in a list...</p>
+                <ul class="psuedo">
+                    <li>::after</li>
+                    <li>::before</li>
+                    <li>::first-letter</li>
+                    <li>::first-line</li>
+                    <li>::selection</li>
+                </ul>
+                <p>A final note...The order you declare your styles matters. If you try to add a color selector to a h1
+                    for
+                    example twice the last selector will win.</p>
+            </section>
+            <hr>
+            <section>
+                <h2>WTF is Specificity?</h2>
+                <p>
+                    What happens when there is a conflict in styles? What if we have a button with a class and just a
+                    regular button? The browser measures how specific a selector is and the most specific will win. This
+                    is
+                    the general formula to remember:<br>
+                    <code>ID > CLASS > ELEMENT</code>. Order also matters, so the last style selector in the sheet will
+                    have
+                    precidence. Use dev tools to explore when styles are not applied in the way you expected.
+                </p>
+                <a href="https://polypane.app/css-specificity-calculator/#selector=">Specificity Calculator</a>
+                <h3>Inline Styles</h3>
+                <p>
+                    In line styles are the most specific way of styling elements. but they are not commonly used. Avoid
+                    these
+                    as they are confusing! If you use the <code>important!</code> exception this will overide all
+                    styles.
+                </p>
+                <h3>CSS Inheritance</h3>
+                <p>
+                    This is something we have seen many times. Basically child elements will inherit styles from parent
+                    elements. So if the body is set as a color of purple, all elements in the body will be purple. We
+                    can
+                    inspect this in the dev tools. We can use the keyword <code>inherit</code> to make sure elements
+                    inherit
+                    as sometimes elements do not inherit.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h2>The Box Model</h2>
+                <p>
+                    Boxmodel is the idea that everything on a webpage is a box and each box has different properties.
+                    The first two properties to be aware of are to control the width and height. When we inspect we will
+                    see
+                    a blue box, this indicates the content area.
+                </p>
+                <div class="boxmodel1">I have a width of 300px and a height of 200px</div>
+                <div class="boxmodel2">I have a width of 300px and a height of 200px. I have a margin of 0 auto</div>
+                <div class="boxmodel3">I have a width of 300px and a height of 200px</div>
+                <p>
+                    There are different pieces of the border that we can control. It is the border behind element. The
+                    main
+                    properties are:
+                </p>
+                <ul>
+                    <li><code>border-width</code></li>
+                    <li><code>border-color</code></li>
+                    <li><code>border-style</code></li>
+                </ul>
+                <p>
+                    <code>boxsizing: border-box</code> makes sure that the width of our element goes from border to
+                    border.
+                    So our content will be minus the border size. We can use <code>border-radius</code> to create smooth
+                    corners. We can use px or % to set the radius. We can also use it to create cirles or just set each
+                    corner individually.
+                </p>
+                <h3>Margin and Padding</h3>
+                <h3>Padding</h3>
+                <p>
+                    Padding pads the space between the content and the border. We can apply padding to each side
+                    separately
+                    or we can use the shorthand property to add
+                    padding to all four sides to any element.<code>padding: 20px</code><br>. We can also set padding to
+                    all
+                    four sides using the order top | right | bottom | left. If we inspect an element usign dev tools we
+                    can
+                    see padding as a green highlight
+                    around an element.
+                </p>
+                <button class="pad">PAD ME</button>
+                <h3>Margin</h3>
+                <p>
+                    Margin is the space outside the element's border. Just like padding we can add to indivisual sides
+                    or
+                    all
+                    four sides using the shorthand property. By default some elements have margin. Like the body. It is
+                    common to set body to <br><code>body { margin: 0}</code>
+                </p>
+                <h3>Display Property</h3>
+                <p>
+                    There is a property called <code>display</code>.
+                    By default all heading elements are block and take up the full space available. But we can change
+                    this
+                    default behaviour. Spans by default are inline. On our heading elements we could change the
+                    properties
+                    <code>display: inline</code>. What happens to padding and margin on inline elements? Padding does
+                    not
+                    take space on inline elements and is not respected by other elements on the page. Width, height,
+                    margin
+                    and padding are all repsected on block elements.
+                <h3 class="display">I am a block h3</h3>
+                <h3 class="display">I am a block h3</h3>
+                <h3 class="display">I am block h3</h3>
+                <span>I am span</span>
+                <span>I am span</span>
+                <h3 class="inline">I am an inline h3</h3>
+                <h3 class="inline">I am an inline h3</h3>
+                <h3 class="inline">I am an inline h3</h3>
+                <div class="inline-block">I am inline block</div>
+                <div class="inline-block">I am inline block</div>
+                <div class="inline-block">I am inline block</div>
+                </p>
+                <p>
+                    <code>inline-block</code> allows all elements to behave like inline elements with all the properties
+                    of
+                    block elements respected.<code>display:none</code> is a useful property that can be used with
+                    javascript
+                    to hide elements dynamically.
+                </p>
+                <h3>CSS units</h3>
+                <p>
+                    Units in CSS consist of relative and absolute. Pixels are the most common absolute value. We will
+                    focus
+                    on the relative units that consist of...<br>
+                <ul>
+                    <li>EM</li>
+                    <li>REM</li>
+                    <li>VH</li>
+                    <li>VW</li>
+                    <li>%</li>
+                </ul>
+                <p>
+                    Percentages are always relative to some other value. For example <code>width:50%</code>. This
+                    describes
+                    an element that is 50% of the parent element.
+                </p>
+                <div class="parent">
+                    <div class="child"></div>
                 </div>
-            </div>
-            <h3>Transitions(Yey!)</h3>
+                <p>
+                    Em's and Rem's are relative units. With font size the value is based on the parent element for
+                    example...If a parent has a font size of 30px and the child has font size of 2em that will be 60px.
+                    If
+                    we use em's with the margin property for example a h2 with a font size of 2em and we add a margin of
+                    1em, <code>margin-left: 1em</code> is equal to 2em. This is useful because it allows us to make
+                    elements
+                    responsive. With pixels elements do not scale well. When we use ems element proportions will grow or
+                    shrink relative to the parent.
+                </p>
+                <button class="em">Click me!</button>
+                <p>
+                    The problem with ems is they can grow and shrink quickly. As they can multiply if we have nested
+                    elements
+                </p>
+                <ul>
+                    <li>Pasta
+                        <ul>
+                            <li>Ravioli</li>
+                            <li>Penne</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    Rem's are the solution to this problem as rems are relative to the root element font size. The
+                    deafult
+                    is
+                    16px but you can reset it. So 3rem would be 3 x the root.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h2>Assorted Properties</h2>
+                <h3>Alpha Channel</h3>
+                <p>
+                    This governs the transparancy of a color. This <code>rgba(255, 255, 255, 0)</code> will result in
+                    full
+                    transparency. Whereas this <code>rgba(255, 255, 255, 1)</code> will result in no transparency. If we
+                    adapt the alpha channel to .5 this will be opaque. it is worth noting that this only effects the
+                    background.
+                </p>
+                <div class="alpha">
+                    <div class="inside-alpha">
+                    </div>
+                </div>
+                <p>
+                    Opacity applies to the entire element.Other elements will also be impacted such as any
+                    buttons. Example:<code>opacity: 50%</code>
+                </p>
+                <div class="opacity">
+                    <div class="inside-o">
+                    </div>
+                </div>
+                <h3>Position</h3>
+                <p>
+                    This can be super confusing! You may need to refer to the <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">docs</a> for this one! Let's
+                    start
+                    with three divs.
+                </p>
+                <h4>Static</h4>
+                <p>The default position of any element is static</p>
+                <div class="static"></div>
+                <div class="static-middle"></div>
+                <div class="static"></div>
+                <h4>Relative</h4>
+                <p>
+                    We can use position relative to offset an element relative to itself.<code>position: relative;
+                top: 100px;</code>
+                </p>
+                <div class="relative"></div>
+                <div class="relative-middle"></div>
+                <div class="relative"></div>
+                <h4>Absolute</h4>
+                <p>
+                    We can use position absolute to remove the element from the normal flow of the document and no space
+                    is
+                    held for that element.<code>position: absolute;
+                top: 100px;</code>. If the parent does not have a position of absolute, the element will be positioned
+                    relative to the body.
+                </p>
+                <div class="absolute-container">
+                    <div class="absolute"></div>
+                    <div class="absolute-middle"></div>
+                    <div class="absolute"></div>
+                </div>
+                <div class="fixed-container">
+                    <h4>Fixed</h4>
+                    <p>
+                        An element that is fixed will go all the way up to the containing block and stay there. Even
+                        when
+                        there
+                        is additional content and the user scrolls. Sticky is simlilar it will remain inplace until the
+                        user
+                        scrolls past and then it will "stick" to the top of the window.
+
+                    </p>
+                    <div>
+                        <div class="static"></div>
+                        <!--<div class="middle-fixed">I am fixed</div> -->
+                        <div class="static"></div>
+                    </div>
+                </div>
+                <h3>Transitions(Yey!)</h3>
+                <p>
+                    Transitions allow us to animate elements on page. In the example below we add
+                    <code>transition: 1s</code>. This allows the hover effect to appear very smooth. We can add the
+                    following to our transition:
+                </p>
+                <ul>
+                    <li>Property name</li>
+                    <li>Duration</li>
+                    <li>Timing Function</li>
+                    <li>Delay</li>
+                </ul>
+                <p>If you want all properties just specify <code>all</code>. Transition timing functions let you change
+                    the
+                    way the animation moves.</p>
+                <div class="circle"></div>
+            </section>
+            <section class="margindiv">
+                <p>
+                    In the example below we can see different transitions applied to arrive at the same point using
+                    transition timing functions.
+                </p>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>
+                    To summarize there are four properties, an element, a duration, a timing function and a delay
+                    (default
+                    no
+                    delay)
+                </p>
+                <h3>The Power of Transform</h3>
+                <p>
+                    Transform is awesome! We can scale, rotate, skew elements like in photoshop. <code>rotate</code>
+                    accepts
+                    degrees,
+                    radiants and turns. <code>scale</code> accepts a decimal as a unit.
+                </p>
+            </section>
+            <section id="transform-container">
+                <div class="transform">Rotate</div>
+                <div class="transform">Scale</div>
+                <div class="transform">TranslateX</div>
+                <div class="transform">TranslateY</div>
+                <div class="transform">Skew</div>
+            </section>
+            <section class="hover-me">
+                <h3>A Cool Hover Button Example</h3>
+                <button class="hover-btn">Hover Me!</button>
+            </section>
+            <h3>Background</h3>
             <p>
-                Transitions allow us to animate elements on page. In the example below we add
-                <code>transition: 1s</code>. This allows the hover effect to appear very smooth. We can add the
-                following to our transition:
-            </p>
-            <ul>
-                <li>Property name</li>
-                <li>Duration</li>
-                <li>Timing Function</li>
-                <li>Delay</li>
-            </ul>
-            <p>If you want all properties just specify <code>all</code>. Transition timing functions let you change the
-                way the animation moves.</p>
-            <div class="circle"></div>
-        </section>
-        <section class="margindiv">
-            <p>
-                In the example below we can see different transitions applied to arrive at the same point using
-                transition timing functions.
-            </p>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <p>
-                To summarize there are four properties, an element, a duration, a timing function and a delay (default
-                no
-                delay)
-            </p>
-            <h3>The Power of Transform</h3>
-            <p>
-                Transform is awesome! We can scale, rotate, skew elements like in photoshop. <code>rotate</code> accepts
-                degrees,
-                radiants and turns. <code>scale</code> accepts a decimal as a unit.
-            </p>
-        </section>
-        <section id="transform-container">
-            <div class="transform">Rotate</div>
-            <div class="transform">Scale</div>
-            <div class="transform">TranslateX</div>
-            <div class="transform">TranslateY</div>
-            <div class="transform">Skew</div>
-        </section>
-        <section class="hover-me">
-            <h3>A Cool Hover Button Example</h3>
-            <button class="hover-btn">Hover Me!</button>
-        </section>
-        <h3>Background</h3>
-        <p>
-            We can add an image as a background. We can specify the url to add the image
-            <code>background: url()</code>. We can use properties such as <code>background-size: cover;</code> to
-            determine the size of the image.
-        <section class="background">
-            </p>
-            <h3>In the midst of winter,</h3>
-            <p>I found there was within me an invincible summer.</p>
-            <p>-Albert Camus</p>
-        </section>
-        <section>
-            <h3>Flexbox</h3>
-            <p>An introduction to Flexbox. Flexbox allows us to layout content dynamically. There are two axis to
-                consider when using flexbox. The main axis that flows from left to right. We can use
-                <code>row-reverse</code> to change the direct to right to left. We can do teh same thing with the column
-                property which is the cross axis and flows top to bottom <code>column-reverse</code>.
-            </p>
-            <div class="flex-container">
-                <div class="flex1">H</div>
-                <div class="flex2">E</div>
-                <div class="flex3">L</div>
-                <div class="flex4">L</div>
-                <div class="flex5">O</div>
-            </div>
-            <p>Justify-content is useful for organising our content. We can use the following properties...</p>
-            <ul>
-                <li><code>justify-content:start</code></li>
-                <li><code>justify-content:flex-end</code></li>
-                <li><code>justify-content:center</code></li>
-                <li><code>justify-content:space-between</code></li>
-                <li><code>justify-content:space-around</code></li>
-            </ul>
-            <p>
-                Elements will automatically fit to a containers content. We can use <code>flex-wrap: wrap</code> to
-                ensure items go on a new row when they do not fit.
-            </p>
-            <p>
-                Align items is used to align items on the cross axis. The default cross axis is top to bottom. We can
-                use the following properties with align-items... All are self explanatory apart from baseline. Baseline
-                aligns each element to the bottom of the text.
-            </p>
-            <ul>
-                <li><code>align-items: flex-start</code></li>
-                <li><code>align-items: flex-end</code></li>
-                <li><code>align-items: center</code></li>
-                <li><code>align-items: base-line</code></li>
-            </ul>
-            <p>
-                Align content is used to control space between colums and it only works when we have <code>wrap</code>
-                or <code>wrap-reverse</code>
-                as a property that is works. Aloign self is very similar and we add it to indivual elements rather that
-                the flex container it self.
-            </p>
-            <p>
-                How do we make elements grow or shrink based on the flex container? We can use <code>flex-basis</code>.
-                <code>Flex basis</code> is the initial size an element should be wheh added to our content.
-                <code>Flex-grow </code>ensures an
-                element takes up all the space available. <code>Flex-shrink</code> ensures an element reduces in size
-                relative to
-                other elements. In the exampel below item 2 will not shrink, item 1 will become narrow quickly and item
-                3 shrinks normally.
-            </p>
-            <div class="flex-shrink">
-                <div>Item 1<br>(shrink 2)</div>
-                <div>Item 2<br>(shrink 0)</div>
-                <div>Item 3<br>(shrink 1)</div>
-            </div>
-        </section>
+                We can add an image as a background. We can specify the url to add the image
+                <code>background: url()</code>. We can use properties such as <code>background-size: cover;</code> to
+                determine the size of the image.
+            <section class="background">
+                </p>
+                <h3>In the midst of winter,</h3>
+                <p>I found there was within me an invincible summer.</p>
+                <p>-Albert Camus</p>
+            </section>
+            <section>
+                <h3>Flexbox</h3>
+                <p>An introduction to Flexbox. Flexbox allows us to layout content dynamically. There are two axis to
+                    consider when using flexbox. The main axis that flows from left to right. We can use
+                    <code>row-reverse</code> to change the direct to right to left. We can do teh same thing with the
+                    column
+                    property which is the cross axis and flows top to bottom <code>column-reverse</code>.
+                </p>
+                <div class="flex-container">
+                    <div class="flex1">H</div>
+                    <div class="flex2">E</div>
+                    <div class="flex3">L</div>
+                    <div class="flex4">L</div>
+                    <div class="flex5">O</div>
+                </div>
+                <p>Justify-content is useful for organising our content. We can use the following properties...</p>
+                <ul>
+                    <li><code>justify-content:start</code></li>
+                    <li><code>justify-content:flex-end</code></li>
+                    <li><code>justify-content:center</code></li>
+                    <li><code>justify-content:space-between</code></li>
+                    <li><code>justify-content:space-around</code></li>
+                </ul>
+                <p>
+                    Elements will automatically fit to a containers content. We can use <code>flex-wrap: wrap</code> to
+                    ensure items go on a new row when they do not fit.
+                </p>
+                <p>
+                    Align items is used to align items on the cross axis. The default cross axis is top to bottom. We
+                    can
+                    use the following properties with align-items... All are self explanatory apart from baseline.
+                    Baseline
+                    aligns each element to the bottom of the text.
+                </p>
+                <ul>
+                    <li><code>align-items: flex-start</code></li>
+                    <li><code>align-items: flex-end</code></li>
+                    <li><code>align-items: center</code></li>
+                    <li><code>align-items: base-line</code></li>
+                </ul>
+                <p>
+                    Align content is used to control space between colums and it only works when we have
+                    <code>wrap</code>
+                    or <code>wrap-reverse</code>
+                    as a property that is works. Aloign self is very similar and we add it to indivual elements rather
+                    that
+                    the flex container it self.
+                </p>
+                <p>
+                    How do we make elements grow or shrink based on the flex container? We can use
+                    <code>flex-basis</code>.
+                    <code>Flex basis</code> is the initial size an element should be wheh added to our content.
+                    <code>Flex-grow </code>ensures an
+                    element takes up all the space available. <code>Flex-shrink</code> ensures an element reduces in
+                    size
+                    relative to
+                    other elements. In the example below item 2 will not shrink, item 1 will become narrow quickly and
+                    item
+                    3 shrinks normally.
+                </p>
+                <div class="flex-shrink">
+                    <div>Item 1</div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                </div>
+                <p>
+                    Flex shorthand allows us to set flex-grow, flex-shrink and flex-basis all in one go. If we have
+                    three
+                    values grow will be first, then shrink then basis. like so <code>.maincontent {
+                    background: #80ffdb;
+                    flex: 2 300px;
+                }</code>
+                </p>
+                <div class="main">
+                    <div class="sidebar"></div>
+                    <div class="maincontent"></div>
+                    <div class="sidebar"></div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <h3>Responsive Design</h3>
+                <p>
+                    Responsive design was the solution to making websites look good on all screen sizes. We can use
+                    media
+                    queries to modify styles depending on a particular parameter. We can change the way an element looks
+                    or is organised using media queries like
+                    so...<code>@media (min-width: 600px) and (max-width: 800px){}</code>. Any styles inside the media
+                    query will be applied when the screen is between
+                </p>
+            </section>
+        </div>
     </main>
+    <footer>
+        <p>Created with ❤️ by <a href="">Lauren.M</a></p>
+        <time></time>
+    </footer>
 </body>
 
 </html>

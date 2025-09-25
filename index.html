@@ -15,311 +15,353 @@
 <body>
     <header>
         <nav>
+            <li><a href="#home">Home</a></li>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>
+                    <a href="/index.html">HTML</a>
+                </li>
+                <li>
+                    <a href="/css/index.html">CSS</a>
+                </li>
+                <li>
+                    <a href="#Home">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
+            <img class="logo" src="/assets/images/square_brackets.jpg" alt="hand drawn square brackets">
         </nav>
     </header>
     <main>
-        <h1>All About HTML</h1>
-        <section id="introduction">
-            <h2>HTML, CSS and JavaScript</h2>
-            <p>
-                HTML stands for HyperTextMarkUp Language and is used to place the elements on a webpage. CSS stands for
-                cascading style sheets and helps us to describe the elements. JavaScript is used to implement actions on
-                our
-                webpages. The ultimate goal of HTML is to give webpages some kind of structure and indcate to our
-                browser
-                how to format the text. HTML provides the rules to the browser.
-                It was orginally designed to format academic papers.
-            </p>
-        </section>
-        <section id="tags">
-            <h2>HTML TAGS</h2>
-            <p>
-                The <code><b>bold</b></code> tag is used to create bold text.
-                We need to make sure we close the tag or everything will be rendered as bold.
-            </p>
-            <p> The <code>p</code> tag is used to create paragraphs</p>
-            <h2>Headings</h2>
-            <p>
-                The top level heading on a page is a <code>h1</code>.Do not use these elements for their deafult size.
-                We
-                must follow the structure of only having one h1 on a page
-            </p>
-            <p>Next level elements include...</p>
-            <h2>I am a H2</h2>
-            <h3>I am a H2</h3>
-            <h4>I am a H2</h4>
-            <h5>I am a H2</h5>
-            <h6>I am a H2</h6>
-            <p>These elements are used for sub headings and should follow the correct heirachy. Heading are used in
-                indicate
-                the main topic, sub topics etc</p>
-        </section>
-        <section id="boilerplate">
-            <h2>Boiler Plate</h2>
-            <p>Every HTML doc must inc;ude standardised markup known as boilerplate</p>
-            <p>Doctype belongs at the top of our file.</p>
-            <code>!DOCTYPE</code>
-            <p>The html element is our root element.</p>
-            <code>html</code>
-            <p>The head element include meta data such as scripts we will run.</p>
-            <code>head</code>
-            <p>The body element includes all of the page content</p>
-            <code>body</code>
-            <p>The title element defines the title we see in tab in our browser</p>
-            <code>title</code>
-        </section>
-        <section id="lists">
-            <h2>Lists</h2>
-            <p>
-                Lists come in two flavors, unordered lists which are bullet points and ordered lists which are numbered.
-                Both
-                contain nested list elements. Only li (scripts and templates) are valid chidren of the <code>ul</code>
-                or
-                <code>ol</code>. We can also add a list nested in a list
-            </p>
-            <h3>ul Example</h3>
-            <ul>
-                <li>list item 1</li>
-                <li>list item 2</li>
-                <li>list item 3</li>
-            </ul>
-            <h3>ol Example</h3>
-            <ol>
-                <li>list item 1</li>
-                <li>list item 2</li>
-                <li>list item 3</li>
-            </ol>
-        </section>
-        <hr>
-        <section id="anchor-tags">
-            <h2>Anchor Tags</h2>
-            <p>
-                The anchor tag is used to link us to another webpage or url. We must include the destination in the href
-                attribute. An attribute is some information we can include in the tag. We can also link to another html
-                file
-                that we have created</p>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a">
-                I am a link!
-            </a>
-        </section>
-        <hr>
-        <section id="images">
-            <h2>Images</h2>
-            <p>
-                The <code>img</code> tag is used to add images to our web pages. It is a self closing tag. We add an
-                attribute called src that provides the location of the image. If your image does not load you should
-                provide
-                an alt attribute!
-            </p>
-            <img src="html.png" alt="html5 logo">
-            <!--You can add comments like this! short cuts cmd slash on a mac-->
-        </section>
-        <hr>
-        <section>
-            <h2>Next Steps</h2>
-            <h2>What is HTML 5?</h2>
-            <p>
-                What is HTML 5? It is a new version of HTML and a larger set of technologies. HTML is not a download. It
-                is
-                a
-                standard of how it shoudl work and be implemented.
-                <a href="https://html.spec.whatwg.org/">HTML SPEC</a>
-            </p>
-            <h2>Block vs Inline</h2>
-            <p>
-                Block and inline refers to how elements fit in wth the flow of the document. Block elements such as p
-                exist
-                on their own line and take up a block. Whereas anchor tags share the space. We can change the behaviour
-                in
-                CSS.
-            </p>
-            <h2>Span and Div</h2>
-            <p>
-                <code>divs</code> are block level generic containers. It is called div because it is a divider.
-            </p>
-            <p>
-                A <code>span</code> is an inline element, except it is inline. It is a way to call something put so we
-                can
-                style it.
-            </p>
-            <h2>Assorted Elements</h2>
-            <p>The <code>hr</code> element makes a line across the screen</p>
-            <p>The <code>br</code> element makes a break in content</p>
-            <p>
-                The <code>subscript</code> and <code>superscript</code> elements are not commonly used. They are used
-                render
-                text below the baseline or contain a reference.
-                <sup><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sup">[1]</a></sup>
-            <h2>I like H<sub>2</sub>0</h2>
-            </p>
-            <h2>HTML Entities</h2>
-            <p>
-                Special codes or sequesnces that result in special characters like a copyright symbol or reserved
-                character
-                such as less than &lt;.
-            </p>
+        <div class="content-wrapper">
+            <h1>All About HTML</h1>
+            <section id="introduction">
+                <h2>HTML, CSS and JavaScript</h2>
+                <p>
+                    HTML stands for HyperTextMarkUp Language and is used to place the elements on a webpage. CSS stands
+                    for
+                    cascading style sheets and helps us to describe the elements. JavaScript is used to implement
+                    actions on
+                    our
+                    webpages. The ultimate goal of HTML is to give webpages some kind of structure and indcate to our
+                    browser
+                    how to format the text. HTML provides the rules to the browser.
+                    It was orginally designed to format academic papers.
+                </p>
+            </section>
             <hr>
-            <h2>Semantics</h2>
-            <p>
-                Sematic markup is an important trend in HTML. It bascially means meaningful markup! We should not use
-                generic divs to organise our markup. Why do we need semantic markup? A crawler for google will look for
-                those elements or links. It also makes the site more accessible to users who need screenreader. Examples
-                of
-                semantic elements.
-            <ul>
-                <li><code>main</code></li>
-                <li><code>header</code></li>
-                <li><code>nav</code></li>
-                <li><code>footer</code></li>
-            </ul>
-            </p>
-            <p>Emmet is a useful tool for genertating HTML quickly</p>
-            <p>
-                For example we can use the angle bracket like so to quickly generate nested elements
-                <code>main>header>nav</code> or we can create sibling elements like so <code>h1+h2+h2</code>. If I
-                wanted to amke a bunch of list items I could do this <code>ul>li*5</code>. Numbering is also very useful
-                <code>
+            <section id="tags">
+                <h2>HTML TAGS</h2>
+                <p>
+                    The <code><b>bold</b></code> tag is used to create bold text.
+                    We need to make sure we close the tag or everything will be rendered as bold.
+                </p>
+                <p> The <code>p</code> tag is used to create paragraphs</p>
+                <h2>Headings</h2>
+                <p>
+                    The top level heading on a page is a <code>h1</code>.Do not use these elements for their deafult
+                    size.
+                    We
+                    must follow the structure of only having one h1 on a page
+                </p>
+                <p>Next level elements include...</p>
+                <h2>I am a H2</h2>
+                <h3>I am a H2</h3>
+                <h4>I am a H2</h4>
+                <h5>I am a H2</h5>
+                <h6>I am a H2</h6>
+                <p>These elements are used for sub headings and should follow the correct heirachy. Heading are used in
+                    indicate
+                    the main topic, sub topics etc</p>
+            </section>
+            <hr>
+            <section id="boilerplate">
+                <h2>Boiler Plate</h2>
+                <p>Every HTML doc must inc;ude standardised markup known as boilerplate</p>
+                <p>Doctype belongs at the top of our file.</p>
+                <code>!DOCTYPE</code>
+                <p>The html element is our root element.</p>
+                <code>html</code>
+                <p>The head element include meta data such as scripts we will run.</p>
+                <code>head</code>
+                <p>The body element includes all of the page content</p>
+                <code>body</code>
+                <p>The title element defines the title we see in tab in our browser</p>
+                <code>title</code>
+            </section>
+            <hr>
+            <section id="lists">
+                <h2>Lists</h2>
+                <p>
+                    Lists come in two flavors, unordered lists which are bullet points and ordered lists which are
+                    numbered.
+                    Both
+                    contain nested list elements. Only li (scripts and templates) are valid chidren of the
+                    <code>ul</code>
+                    or
+                    <code>ol</code>. We can also add a list nested in a list
+                </p>
+                <h3>ul Example</h3>
+                <ul>
+                    <li>list item 1</li>
+                    <li>list item 2</li>
+                    <li>list item 3</li>
+                </ul>
+                <h3>ol Example</h3>
+                <ol>
+                    <li>list item 1</li>
+                    <li>list item 2</li>
+                    <li>list item 3</li>
+                </ol>
+            </section>
+            <hr>
+            <section id="anchor-tags">
+                <h2>Anchor Tags</h2>
+                <p>
+                    The anchor tag is used to link us to another webpage or url. We must include the destination in the
+                    href
+                    attribute. An attribute is some information we can include in the tag. We can also link to another
+                    html
+                    file
+                    that we have created</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a">
+                    I am a link!
+                </a>
+            </section>
+            <hr>
+            <section id="images">
+                <h2>Images</h2>
+                <p>
+                    The <code>img</code> tag is used to add images to our web pages. It is a self closing tag. We add an
+                    attribute called src that provides the location of the image. If your image does not load you should
+                    provide
+                    an alt attribute!
+                </p>
+                <img src="html.png" alt="html5 logo">
+                <!--You can add comments like this! short cuts cmd slash on a mac-->
+            </section>
+            <hr>
+            <section>
+                <h2>Next Steps</h2>
+                <h2>What is HTML 5?</h2>
+                <p>
+                    What is HTML 5? It is a new version of HTML and a larger set of technologies. HTML is not a
+                    download. It
+                    is
+                    a
+                    standard of how it shoudl work and be implemented.
+                    <a href="https://html.spec.whatwg.org/">HTML SPEC</a>
+                </p>
+                <h2>Block vs Inline</h2>
+                <p>
+                    Block and inline refers to how elements fit in wth the flow of the document. Block elements such as
+                    p
+                    exist
+                    on their own line and take up a block. Whereas anchor tags share the space. We can change the
+                    behaviour
+                    in
+                    CSS.
+                </p>
+                <h2>Span and Div</h2>
+                <p>
+                    <code>divs</code> are block level generic containers. It is called div because it is a divider.
+                </p>
+                <p>
+                    A <code>span</code> is an inline element, except it is inline. It is a way to call something put so
+                    we
+                    can
+                    style it.
+                </p>
+                <h2>Assorted Elements</h2>
+                <p>The <code>hr</code> element makes a line across the screen</p>
+                <p>The <code>br</code> element makes a break in content</p>
+                <p>
+                    The <code>subscript</code> and <code>superscript</code> elements are not commonly used. They are
+                    used
+                    render
+                    text below the baseline or contain a reference.
+                    <sup><a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sup">[1]</a></sup>
+                <h2>I like H<sub>2</sub>0</h2>
+                </p>
+                <h2>HTML Entities</h2>
+                <p>
+                    Special codes or sequesnces that result in special characters like a copyright symbol or reserved
+                    character
+                    such as less than &lt;.
+                </p>
+                <hr>
+                <h2>Semantics</h2>
+                <p>
+                    Sematic markup is an important trend in HTML. It bascially means meaningful markup! We should not
+                    use
+                    generic divs to organise our markup. Why do we need semantic markup? A crawler for google will look
+                    for
+                    those elements or links. It also makes the site more accessible to users who need screenreader.
+                    Examples
+                    of
+                    semantic elements.
+                <ul>
+                    <li><code>main</code></li>
+                    <li><code>header</code></li>
+                    <li><code>nav</code></li>
+                    <li><code>footer</code></li>
+                </ul>
+                </p>
+                <p>Emmet is a useful tool for genertating HTML quickly</p>
+                <p>
+                    For example we can use the angle bracket like so to quickly generate nested elements
+                    <code>main>header>nav</code> or we can create sibling elements like so <code>h1+h2+h2</code>. If I
+                    wanted to amke a bunch of list items I could do this <code>ul>li*5</code>. Numbering is also very
+                    useful
+                    <code>
                     nav>ul>li*5>a[$]
                 </code>
-            </p>
-            <a href="https://docs.emmet.io/cheat-sheet/">emmet cheatsheet</a>
-        </section>
-        <hr>
-        <section>
-            <h2>The Table Element</h2>
-            <p>
-                A table is made up of rows and columns and a useful way to display our data! We can use it to compare
-                data. In the 90's table were used to position items on a web page. The <code>td</code> element defines a
-                single cell. The <code>tr</code> element defines a row.
-            </p>
-            <h3>Most Popular Web Technologies 2025</h3>
-            <p>
-                The data has been taken from the Stackoverflow survey 2024
-                <sup>
-                    <a href="https://survey.stackoverflow.co/2025/technology#most-popular-technologies-language">[2]
-                        <a>
-                </sup>
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th rowspan="2">Language</th>
-                        <th colspan="2">Respondent Type</th>
-                    </tr>
-                    <tr>
-                        <th>Professionals</th>
-                        <th>Learning to Code</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>68.8%</td>
-                        <td>62.8%</td>
-                    </tr>
-                    <tr>
-                        <td>HTML/CSS</td>
-                        <td>63%</td>
-                        <td>66.6%</td>
-                    </tr>
-                </tbody>
-            </table>
+                </p>
+                <a href="https://docs.emmet.io/cheat-sheet/">emmet cheatsheet</a>
+            </section>
             <hr>
-            <h2>The Form Element</h2>
-            <p>
-                The form element is a container that will hold form controls. We group the collection of inputs together
-                using forms. The <code>action</code> attribute specifies where the form data should be sent. The
-                <code>method</code> attribute specifies which HTTP method will be used.
-            </p>
-            <h3>The Input Element</h3>
-            <p>
-                The input element is a self closing element. The default type is text, but we should specify the type.
-                The type will change how the input behaves.A placeholder can be used to indicate to the user what should
-                entered. Labels give us information about and input but also associates the label to the input. Using
-                <code>label for="username"</code> and giving an <code>id</code> attribute will connect the label and the
-                input. The default behaviour for a button inside a form is submit!
-            </p>
-            <form action="/search">
+            <section>
+                <h2>The Table Element</h2>
                 <p>
-                    <label for="username">Enter a username</label>
-                    <input type="text" placeholder="username" id="username" name="username">
+                    A table is made up of rows and columns and a useful way to display our data! We can use it to
+                    compare
+                    data. In the 90's table were used to position items on a web page. The <code>td</code> element
+                    defines a
+                    single cell. The <code>tr</code> element defines a row.
                 </p>
+                <h3>Most Popular Web Technologies 2025</h3>
+                <p>
+                    The data has been taken from the Stackoverflow survey 2024
+                    <sup>
+                        <a href="https://survey.stackoverflow.co/2025/technology#most-popular-technologies-language">[2]
+                            <a>
+                    </sup>
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Language</th>
+                            <th colspan="2">Respondent Type</th>
+                        </tr>
+                        <tr>
+                            <th>Professionals</th>
+                            <th>Learning to Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>68.8%</td>
+                            <td>62.8%</td>
+                        </tr>
+                        <tr>
+                            <td>HTML/CSS</td>
+                            <td>63%</td>
+                            <td>66.6%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <h2>The Form Element</h2>
+                <p>
+                    The form element is a container that will hold form controls. We group the collection of inputs
+                    together
+                    using forms. The <code>action</code> attribute specifies where the form data should be sent. The
+                    <code>method</code> attribute specifies which HTTP method will be used.
+                </p>
+                <h3>The Input Element</h3>
+                <p>
+                    The input element is a self closing element. The default type is text, but we should specify the
+                    type.
+                    The type will change how the input behaves.A placeholder can be used to indicate to the user what
+                    should
+                    entered. Labels give us information about and input but also associates the label to the input.
+                    Using
+                    <code>label for="username"</code> and giving an <code>id</code> attribute will connect the label and
+                    the
+                    input. The default behaviour for a button inside a form is submit!
+                </p>
+                <form action="/search">
+                    <p>
+                        <label for="username">Enter a username</label>
+                        <input type="text" placeholder="username" id="username" name="username">
+                    </p>
 
-                <p>
-                    <label for="password">Enter a password</label>
-                    <input type="password" placeholder="password" id="password">
-                </p>
+                    <p>
+                        <label for="password">Enter a password</label>
+                        <input type="password" placeholder="password" id="password">
+                    </p>
 
-                <p>
-                    <label for="color">Pick a color</label>
-                    <input type="color" id="color">
+                    <p>
+                        <label for="color">Pick a color</label>
+                        <input type="color" id="color">
+                    </p>
+                    <p>
+                        <label for="number">Enter a number </label>
+                        <input type="number" placeholder="number" id="number" min="1" max="10">
+                    </p>
+                    <button type="button">Submit</button>
+                    <input type="submit" value="Click me">
+                </form>
+                <button>Not inside Form!</button>
+                <h2>More Inputs</h2>
+                <form action="/birds">
+                    <input type="checkbox" name="agrees_tos" id="agree">
+                    <label for="agree">I agree to everything</label>
+                    <p>
+                        <label for="xs">XS</label>
+                        <input type="radio" name="size" id="XS" value="xs">
+                        <label for="S">S</label>
+                        <input type="radio" name="size" id="s" value="s">
+                        <label for="M">M</label>
+                        <input type="radio" name="size" id="m" value="m">
+                    </p>
+                    <!-- /birds?agrees_tos=on&size=s -->
+                    <p>
+                        <label for="meal">Please select a meal</label>
+                        <select name="meal" id="meal">
+                            <option value="chickennuggets">Chicken Nuggets</option>
+                            <option value="cheeseburger">Cheese Burger</option>
+                            <option value="Hamburger">Hamburger</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="ketchup">ketchup</label>
+                        <input type="range" id="ketchup" min="1" max="5" value="2" name="ketchup">
+                    </p>
+                    <p>
+                        <label for="requests">Any Special Requests</label>
+                        <textarea id="requests" name="requests" rows="10" cols="40"></textarea>
+                    </p>
+                    <button>Submit</button>
+                </form>
+                <h2>Form Validation</h2>
+                <p>There are two types of validation client side and server side.
+                <ul>
+                    <li><code>required</code></li>
+                    <li><code>minlength</code> and <code>maxlength</code></li>
+                    <li><code>pattern</code></li>
+                    <li><code></code></li>
+                    <li><code></code></li>
+                </ul>
                 </p>
-                <p>
-                    <label for="number">Enter a number </label>
-                    <input type="number" placeholder="number" id="number" min="1" max="10">
-                </p>
-                <button type="button">Submit</button>
-                <input type="submit" value="Click me">
-            </form>
-            <button>Not inside Form!</button>
-            <h2>More Inputs</h2>
-            <form action="/birds">
-                <input type="checkbox" name="agrees_tos" id="agree">
-                <label for="agree">I agree to everything</label>
-                <p>
-                    <label for="xs">XS</label>
-                    <input type="radio" name="size" id="XS" value="xs">
-                    <label for="S">S</label>
-                    <input type="radio" name="size" id="s" value="s">
-                    <label for="M">M</label>
-                    <input type="radio" name="size" id="m" value="m">
-                </p>
-                <!-- /birds?agrees_tos=on&size=s -->
-                <p>
-                    <label for="meal">Please select a meal</label>
-                    <select name="meal" id="meal">
-                        <option value="chickennuggets">Chicken Nuggets</option>
-                        <option value="cheeseburger">Cheese Burger</option>
-                        <option value="Hamburger">Hamburger</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="ketchup">ketchup</label>
-                    <input type="range" id="ketchup" min="1" max="5" value="2" name="ketchup">
-                </p>
-                <p>
-                    <label for="requests">Any Special Requests</label>
-                    <textarea id="requests" name="requests" rows="10" cols="40"></textarea>
-                </p>
-                <button>Submit</button>
-            </form>
-            <h2>Form Validation</h2>
-            <p>There are two types of validation client side and server side.
-            <ul>
-                <li><code>required</code></li>
-                <li><code>minlength</code> and <code>maxlength</code></li>
-                <li><code>pattern</code></li>
-                <li><code></code></li>
-                <li><code></code></li>
-            </ul>
-            </p>
-            <form action="/dummy">
-                <label for="name">Enter Name</label>
-                <input type=text name="name" id="name" required>
-                <p>
-                    <label for="username" id="username"></label>
-                    <input type="text" id="username" minlength="5" maxlength="10">
-                </p>
-                <p>
-                    <input type="email" required>
-                </p>
-                <button>Submit</button>
-            </form>
-        </section>
+                <form action="/dummy">
+                    <label for="name">Enter Name</label>
+                    <input type=text name="name" id="name" required>
+                    <p>
+                        <label for="username" id="username">Enter Password</label>
+                        <input type="text" id="username" minlength="5" maxlength="10">
+                    </p>
+                    <p>
+                        <label for="username" id="username">Enter Email</label>
+                        <input type="email" required>
+                    </p>
+                    <button>Submit</button>
+                </form>
+            </section>
+        </div>
     </main>
     <footer>
         <p>Created with ❤️ by <a href="">Lauren.M</a></p>
